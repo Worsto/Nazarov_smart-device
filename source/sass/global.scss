@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "PT Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("PT Mono"),
+    local("PTMono"),
+    url("../fonts/pt-mono-regular.woff2") format("woff2"),
+    url("../fonts/pt-mono-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Roboto Condensed"),
+    local("Roboto-Condensed"),
+    url("../fonts/roboto-condensed-regular.woff2") format("woff2"),
+    url("../fonts/roboto-condensed-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Roboto Condensed Bold"),
+    local("Roboto-Condensed-Bold"),
+    url("../fonts/roboto-condensed-bold.woff2") format("woff2"),
+    url("../fonts/roboto-condensed-bold.woff") format("woff");
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
