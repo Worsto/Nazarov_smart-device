@@ -1,28 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Smart Device Печатные платы на заказ">
   <title>Smart device</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-  <header>
-    <div>
-      <a href="#">
-        <img src="img/logo.svg" alt="Логотип Smart Device">
-      </a>
-      <a href="mailto:info@sd.ru">info@sd.ru</a>
-      <a href="tel:+74950005252">+7 (495) 000 52 52</a>
-      <button type="button">Заказать звонок</button>
-    </div>
-    <h1>Печатные платы</h1>
-    <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-    <button type="button">Получить бесплатную консультацию</button>
-  </header>
+<body class="page__body">
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <div class="top-section">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" aria-label="Главная страница Smart Device">
+          <picture>
+            <!-- mobile -->
+            <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+            <!-- desctop, tablet -->
+            <img class="page-header__logo-image" src="img/logo.svg" width="202" height="52" alt="Логотип компании Smart Device">
+          </picture>
+        </a>
+        <div class="contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--mail">
+              <a href="mailto:info@sd.ru" aria-label="E-mail">info@sd.ru</a>
+            </li>
+            <li class="contacts__item contacts__item--phone">
+              <a href="tel:+74950005252" aria-label="Телефон для связи">+7 (495) 000 52 52</a>
+            </li>
+          </ul>
+          <a class="contacts__button page__button" href="#">Заказать звонок</a>
+        </div>
+      </div>
+    </header>
+    <section class="top-section__content">
+      <div class="top-section__wrapper">
+        <h2 class="top-section__heading">Печатные платы</h2>
+        <p class="top-section__description">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+        <div class="top-section__button-wrapper">
+          <a class="top-section__button page__button" href="#consulting">Получить бесплатную консультацию</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

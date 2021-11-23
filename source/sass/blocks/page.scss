@@ -12,4 +12,29 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: center;
+  line-height: 22px;
+  overflow: auto;
+}
+
+.page__button {
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 14px 26px;
+  padding-top: 13px;
+  color: var(--contrast-type);
+  border: 1px solid var(--contrast-border);
+
+  @media (max-width: $tablet-width) {
+    padding: 18px 30px;
+  }
 }

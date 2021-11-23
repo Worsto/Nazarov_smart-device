@@ -1,20 +1,31 @@
 :root {
-  --basic-type: #000000;
-  --basic-type-opacity: rgba(0, 0, 0, 0.5);
-  --heading-type: #1f1f1f;
-  --form-type: #1c1c1c;
+  --basic-type: #666666;
+  --dark-background: #1b2d37;
   --contrast-type: #ffffff;
-  --menu-type: #48494d;
-  --main-accent: #0ad9c6;
-  --hover-accent: #08ae9f;
-  --main-background: #ffffff;
-  --extra-background: #f6f7f9;
-  --menu-background: #f6f6f6;
-  --contrast-background: #131314;
-  --accent-type: var(--main-accent);
-  --accent-underline: var(--main-accent);
-  --form-border: #c9ccd4;
+  --contrast-border: var(--contrast-type);
+  --main-theme: #00b2ff;
+
+
+  // --basic-type-opacity: rgba(0, 0, 0, 0.5);
+  // --heading-type: #1f1f1f;
+  // --form-type: #1c1c1c;
+  // --menu-type: #48494d;
+  // --main-accent: #0ad9c6;
+  // --hover-accent: #08ae9f;
+  // --main-background: #ffffff;
+  // --extra-background: #f6f7f9;
+  // --menu-background: #f6f6f6;
+  // --contrast-background: #131314;
+  // --accent-type: var(--main-accent);
+  // --accent-underline: var(--main-accent);
+  // --form-border: #c9ccd4;
 }
 
-$desktop-width: 1023px;
-$tablet-width: 765px;
+$font-roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
+$font-roboto: "Roboto", "Arial", sans-serif;
+$font-pt-mono: "PT Mono", "Courier", monospace;
+
+$tablet-width: 1023px;
+$mobile-width: 767px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

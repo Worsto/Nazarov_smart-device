@@ -1,0 +1,45 @@
+.page-header {
+  padding-top: 28px;
+  padding-bottom: 20px;
+  min-width: 180px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 74.3%;
+    margin: 0 auto;
+    min-width: 950px;
+  }
+
+  &__logo {
+    margin-right: 30px;
+    padding-top: 5px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 14px;
+
+    &__wrapper {
+      justify-content: space-between;
+      width: 93.5%;
+      min-width: auto;
+    }
+
+    &__logo {
+      padding-top: 6px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 11px;
+
+    &__wrapper {
+      width: 89.5%;
+    }
+
+    &__logo-image {
+      width: 38px;
+    }
+  }
+}
