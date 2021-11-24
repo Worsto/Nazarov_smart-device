@@ -22,113 +22,12 @@
     background-size: cover, 705px 515px, 35%;
   }
 
-  &__content {
-    box-sizing: border-box;
-    position: relative;
-  }
-
-  &__heading {
-    padding: 0;
-    margin: 0;
-    font-family: $font-roboto-condensed;
-    font-size: 80px;
-    line-height: 94px;
-    font-weight: 700;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--contrast-type);
-    margin-bottom: 26px;
-  }
-
-  &__description {
-    position: relative;
-    box-sizing: border-box;
-    font-size: 22px;
-    line-height: 34px;
-    color: #ffffff;
-    width: 55%;
-    margin: 0;
-    padding: 0;
-    padding-left: 97px;
-    margin-bottom: 44px;
-    font-family: $font-pt-mono;
-
-    &::before {
-      @include pseudo(66px, 2px);
-      background-color: #ffffff;
-      left: 3px;
-      top: 17px;
-    }
-  }
-
-  &__wrapper {
-    width: 75%;
-    margin: 0 auto;
-    padding-top: 204px;
-    padding-bottom: 181px;
-    max-width: 1421px;
-  }
-
-  &__button-wrapper {
-    padding-left: 97px;
-    margin-bottom: 95px;
-  }
-
-  &__button {
-    width: 408px;
-    background-color: var(--main-theme);
-    border: none;
-    font-size: 16px;
-    line-height: 19px;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 17px;
-    padding-bottom: 19px;
-  }
-
   @media (max-width: $tablet-width) {
     background-image: url("../img/dark-background@1x.png"),
       url("../img/circuit-tablet@1x.png"),
       url("../img/top-background-transparent.svg");
     background-position: 50%, right 0 top 113px, right -200px top -40px;
     background-size: cover, 260px 340px, 68.7%;
-
-    &__wrapper {
-      box-sizing: border-box;
-      width: 77%;
-      padding-top: 91px;
-      padding-right: 90px;
-      padding-bottom: 164px;
-      max-width: none;
-    }
-
-    &__heading {
-      font-size: 60px;
-      line-height: 70px;
-      margin-bottom: 27px;
-    }
-
-    &__description {
-      font-size: 18px;
-      line-height: 156.8%;
-      padding-left: 51px;
-      margin-bottom: 55px;
-      width: 100%;
-
-      &::before {
-        width: 32px;
-      }
-    }
-
-    &__button-wrapper {
-      padding-left: 52px;
-      margin-bottom: 0;
-    }
-
-    &__button {
-      width: 378px;
-      padding: 18px 30px;
-    }
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
@@ -145,34 +44,6 @@
     background-size: cover, 294px 220px, 157%;
     background-position: 50%, right 0 top 92px, right -335px top -45px;
 
-    &__wrapper {
-      width: 90%;
-      padding-top: 204px;
-      padding-right: 0;
-      padding-bottom: 69px;
-    }
-
-    &__heading {
-      font-size: 40px;
-      line-height: 47px;
-      margin-bottom: 26px;
-    }
-
-    &__description {
-      font-size: 16px;
-      margin-bottom: 43px;
-      width: 100%;
-    }
-
-    &__button {
-      width: 100%;
-    }
-
-    &__button-wrapper {
-      text-align: center;
-      padding-left: 4px;
-    }
-
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
       background-image: url("../img/dark-background@2x.png"),
@@ -181,3 +52,133 @@
     }
   }
 }
+
+.top-section__content {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.top-section__heading {
+  padding: 0;
+  margin: 0;
+  font-family: $font-roboto-condensed;
+  font-size: 80px;
+  line-height: 94px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--contrast-type);
+  margin-bottom: 26px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 27px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 26px;
+  }
+}
+
+.top-section__description {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 22px;
+  line-height: 34px;
+  color: var(--contrast-type);
+  width: 55%;
+  margin: 0;
+  padding: 0;
+  padding-left: 97px;
+  margin-bottom: 44px;
+  font-family: $font-pt-mono;
+
+  &::before {
+    @include pseudo(66px, 2px);
+    background-color: #ffffff;
+    left: 3px;
+    top: 17px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 156.8%;
+    padding-left: 51px;
+    margin-bottom: 55px;
+    width: 100%;
+
+    &::before {
+      width: 32px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    margin-bottom: 43px;
+    width: 100%;
+  }
+}
+
+.top-section__wrapper {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 204px;
+  padding-bottom: 181px;
+  max-width: 1421px;
+
+  @media (max-width: $tablet-width) {
+    box-sizing: border-box;
+    width: 77%;
+    padding-top: 91px;
+    padding-right: 90px;
+    padding-bottom: 164px;
+    max-width: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 90%;
+    padding-top: 204px;
+    padding-right: 0;
+    padding-bottom: 69px;
+  }
+}
+
+.top-section__button-wrapper {
+  padding-left: 97px;
+  margin-bottom: 95px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 52px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    padding-left: 4px;
+  }
+}
+
+.top-section__button {
+  width: 408px;
+  background-color: var(--main-theme);
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 17px;
+  padding-bottom: 19px;
+
+  @media (max-width: $tablet-width) {
+    width: 378px;
+    padding: 18px 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+

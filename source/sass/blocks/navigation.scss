@@ -1,0 +1,27 @@
+.navigation__list {
+  display: flex;
+  @include list-style();
+  font-family: $font-pt-mono;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+
+    a {
+      display: block;
+    }
+  }
+}
+
+.navigation__column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 75px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}

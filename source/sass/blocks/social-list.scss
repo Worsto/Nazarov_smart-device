@@ -1,0 +1,33 @@
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  @include list-style();
+
+  @media (max-width: $tablet-width) {
+    padding-top: 11px;
+  }
+}
+
+.social-list__item {
+  margin-right: 15px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.social-list__link {
+  display: block;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  color: black;
+
+  &:hover svg {
+    opacity: 0.7;
+  }
+
+  &:active svg {
+    opacity: 0.5;
+  }
+}
