@@ -51,43 +51,12 @@
   margin-bottom: 30px;
   font-family: $font-pt-mono;
 
-  &::before {
+  & svg {
     @include pseudo(36px, 35px);
-    left: 42px;
-    top: 40px;
+    left: 41px;
+    top: 37px;
     background-repeat: no-repeat;
-  }
-
-  &--time::before {
-    background-image: url("../img/icon-timer.svg");
-  }
-
-  &--time:hover::before {
-    background-image: url("../img/icon-timer-hover.svg");
-  }
-
-  &--supplier::before {
-    background-image: url("../img/icon-suppliers.svg");
-  }
-
-  &--supplier:hover::before {
-    background-image: url("../img/icon-suppliers-hover.svg");
-  }
-
-  &--confidence::before {
-    background-image: url("../img/icon-confidence.svg");
-  }
-
-  &--confidence:hover::before {
-    background-image: url("../img/icon-confidence-hover.svg");
-  }
-
-  &--price::before {
-    background-image: url("../img/icon-offer.svg");
-  }
-
-  &--price:hover::before {
-    background-image: url("../img/icon-offer-hover.svg");
+    fill: var(--main-theme);
   }
 
   &:nth-child(2n) {
@@ -123,6 +92,10 @@
     h3 {
       color: var(--contrast-type);
     }
+
+    svg {
+      fill: var(--contrast-border);
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -138,7 +111,7 @@
       margin-bottom: 7px;
     }
 
-    &::before {
+    svg {
       @include pseudo(36px, 35px);
       left: 24px;
       top: 23px;
@@ -165,6 +138,10 @@
       h3 {
         margin-bottom: 10px;
       }
+
+      svg {
+        width: 32px;
+      }
     }
 
     &--confidence {
@@ -173,6 +150,10 @@
 
       h3 {
         margin-bottom: 18px;
+      }
+
+      svg {
+        width: 32px;
       }
     }
 

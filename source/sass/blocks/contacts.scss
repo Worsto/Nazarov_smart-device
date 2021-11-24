@@ -14,15 +14,6 @@
       line-height: 0;
       padding-top: 26px;
       padding-left: 23px;
-
-      &::before {
-        width: 25px;
-        height: 26px;
-        left: 0;
-        top: 0;
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
     }
 
     &>a {
@@ -58,15 +49,22 @@
 
     &:hover,
     &:focus {
-      opacity: 0.7;
-    }
+      text-shadow: var(--main-theme) 0 0 5px;
 
-    &::before {
-      @include pseudo(40px, 19px);
-      left: 0;
-      top: 0;
-      background-repeat: no-repeat;
+      svg {
+        fill: var(--contrast-border);
+        stroke: var(--main-theme)
+      }
     }
+  }
+
+  svg {
+    @include pseudo(40px, 19px);
+    left: 0;
+    top: -1px;
+    background-repeat: no-repeat;
+    fill: var(--main-theme);
+    width: 18px;
   }
 
 
@@ -74,13 +72,7 @@
     margin-right: 0;
   }
 
-  &--mail a::before {
-    background-image: url("../img/icon-mail.svg");
-    top: 2px;
-  }
-
-  &--phone a::before {
-    background-image: url("../img/icon-phone.svg");
+  &--phone svg {
     left: 6px;
   }
 
@@ -93,15 +85,15 @@
       line-height: 0;
       padding-top: 26px;
       padding-left: 23px;
+    }
 
-      &::before {
-        width: 25px;
-        height: 26px;
-        left: 0;
-        top: 0;
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
+    svg {
+      width: 25px;
+      height: 26px;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
     &--mail {
