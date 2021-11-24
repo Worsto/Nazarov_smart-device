@@ -19,10 +19,10 @@ $mobile-width: 767px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-@mixin list-style($pd:0, $mg:0, $ls:none) {
-  padding: $pd;
-  margin: $mg;
-  list-style: $ls;
+@mixin list-style($padding:0, $margin:0, $list-style:none) {
+  padding: $padding;
+  margin: $margin;
+  list-style: $list-style;
 }
 
 @mixin pseudo($width, $height) {
@@ -30,14 +30,4 @@ $retina-dppx: 1.5dppx;
   content: "";
   width: $width;
   height: $height;
-}
-
-@mixin notext-button ($width, $height) {
-  font-size: 0;
-  line-height: 0;
-  width: $width;
-  height: $height;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
 }
