@@ -36,7 +36,7 @@
     max-width: none;
     width: 94%;
     padding-top: 5px;
-    padding-bottom: 84px;
+    padding-bottom: 81px;
 
     h2 {
       font-size: 32px;
@@ -111,7 +111,7 @@
     &::before {
       width: 160px;
       height: 360px;
-      left: -22px;
+      left: -14px;
       top: 0;
 
       @media (min-resolution: $retina-dpi),
@@ -128,6 +128,7 @@
     &::before {
       width: 0;
       height: 0;
+      left: -22px;
       background-image: none;
     }
   }
