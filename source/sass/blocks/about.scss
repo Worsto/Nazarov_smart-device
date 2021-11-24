@@ -90,16 +90,16 @@
 
   &::before {
     @include pseudo(180px, 320px);
-    left: -30px;
-    top: 4px;
-    background-image: url("../img/2005-desktop@1x.png");
+    left: -21px;
+    top: 2px;
+    background-image: url("../img/2005-desktop@1x.webp");
     background-size: cover;
     background-position: -9px 0;
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../img/2005-desktop@2x.png");
+      background-image: url("../img/2005-desktop@2x.webp");
       background-size: cover;
     }
   }
@@ -113,10 +113,11 @@
       height: 360px;
       left: -14px;
       top: 0;
+      background-image: url("../img/2005-tablet@1x.webp");
 
       @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
-        background-image: url("../img/2005-tablet@2x.png");
+        background-image: url("../img/2005-tablet@2x.webp");
       }
     }
   }
@@ -139,10 +140,19 @@
   border-color: var(--main-theme);
   min-width: 180px;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    background-color: var(--main-theme);
+    color: var(--contrast-type);
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
   @media (max-width: $tablet-width) {
     padding-top: 14px;
     padding-bottom: 14px;
   }
 }
-
-

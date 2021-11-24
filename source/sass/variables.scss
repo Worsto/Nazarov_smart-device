@@ -1,5 +1,6 @@
 :root {
   --main-theme: #00b2ff;
+  --theme-hover: #00a7ff;
   --basic-type: #666666;
   --dark-background: #1b2d37;
   --clear-background: #ffffff;
@@ -7,25 +8,10 @@
   --contrast-border: var(--contrast-type);
   --light-border: #ebebeb;
   --services-card-background: #26353d;
-
-
-  // --basic-type-opacity: rgba(0, 0, 0, 0.5);
-  // --heading-type: #1f1f1f;
-  // --form-type: #1c1c1c;
-  // --menu-type: #48494d;
-  // --main-accent: #0ad9c6;
-  // --hover-accent: #08ae9f;
-  // --main-background: #ffffff;
-  // --extra-background: #f6f7f9;
-  // --menu-background: #f6f6f6;
-  // --contrast-background: #131314;
-  // --accent-type: var(--main-accent);
-  // --accent-underline: var(--main-accent);
-  // --form-border: #c9ccd4;
+  --form-input-background: rgba(256, 256, 256, 0.1);
 }
 
 $font-roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
-$font-roboto: "Roboto", "Arial", sans-serif;
 $font-pt-mono: "PT Mono", "Courier", monospace;
 
 $tablet-width: 1023px;

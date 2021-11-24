@@ -172,6 +172,16 @@
   padding-top: 17px;
   padding-bottom: 19px;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: var(--theme-hover);
+  }
+
   @media (max-width: $tablet-width) {
     width: 378px;
     padding: 18px 30px;
@@ -181,4 +191,3 @@
     width: 100%;
   }
 }
-

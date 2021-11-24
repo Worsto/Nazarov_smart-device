@@ -12,7 +12,7 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: center;
   line-height: 22px;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .page__button {

@@ -3,7 +3,7 @@
   background-color: var(--dark-background);
   color: var(--contrast-type);
   padding-top: 90px;
-  padding-bottom: 97px;
+  padding-bottom: 96px;
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
@@ -108,6 +108,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
   &::before {
     z-index: 1;
     @include pseudo(6px, 6px);
@@ -126,29 +131,29 @@
   }
 
   &--production {
-    background-image: url("../img/producing-desktop@1x.png");
+    background-image: url("../img/producing-desktop@1x.webp");
   }
 
   &--instalation {
-    background-image: url("../img/installing-desktop@1x.png");
+    background-image: url("../img/installing-desktop@1x.webp");
   }
 
   &--led {
-    background-image: url("../img/led-desktop@1x.png");
+    background-image: url("../img/led-desktop@1x.webp");
   }
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
     &__production {
-      background-image: url("../img/producing-desktop@2x.png");
+      background-image: url("../img/producing-desktop@2x.webp");
     }
 
     &__instalation {
-      background-image: url("../img/installing-desktop@2x.png");
+      background-image: url("../img/installing-desktop@2x.webp");
     }
 
     &__led {
-      background-image: url("../img/led-desktop@2x.png");
+      background-image: url("../img/led-desktop@2x.webp");
     }
   }
 
@@ -160,30 +165,30 @@
     padding-bottom: 39px;
 
     &--production {
-      background-image: url("../img/producing-tablet@1x.png");
+      background-image: url("../img/producing-tablet@1x.webp");
     }
 
     &--instalation {
-      background-image: url("../img/installing-tablet@1x.png");
+      background-image: url("../img/installing-tablet@1x.webp");
     }
 
     &--led {
       padding-top: 52px;
-      background-image: url("../img/led-tablet@1x.png");
+      background-image: url("../img/led-tablet@1x.webp");
     }
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
       &__production {
-        background-image: url("../img/producing-tablet@2x.png");
+        background-image: url("../img/producing-tablet@2x.webp");
       }
 
       &__instalation {
-        background-image: url("../img/installing-tablet@2x.png");
+        background-image: url("../img/installing-tablet@2x.webp");
       }
 
       &__led {
-        background-image: url("../img/led-tablet@2x.png");
+        background-image: url("../img/led-tablet@2x.webp");
       }
     }
   }
@@ -200,30 +205,30 @@
     }
 
     &--production {
-      background-image: url("../img/producing-mobile@1x.png");
+      background-image: url("../img/producing-mobile@1x.webp");
     }
 
     &--instalation {
-      background-image: url("../img/installing-mobile@1x.png");
+      background-image: url("../img/installing-mobile@1x.webp");
     }
 
     &--led {
       padding-top: 29px;
-      background-image: url("../img/led-mobile@1x.png");
+      background-image: url("../img/led-mobile@1x.webp");
     }
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
       &__production {
-        background-image: url("../img/producing-mobile@2x.png");
+        background-image: url("../img/producing-mobile@2x.webp");
       }
 
       &__instalation {
-        background-image: url("../img/installing-mobile@2x.png");
+        background-image: url("../img/installing-mobile@2x.webp");
       }
 
       &__led {
-        background-image: url("../img/led-mobile@2x.png");
+        background-image: url("../img/led-mobile@2x.webp");
       }
     }
   }

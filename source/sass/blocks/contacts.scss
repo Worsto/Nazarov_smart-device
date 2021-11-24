@@ -56,6 +56,11 @@
     position: relative;
     font-family: $font-pt-mono;
 
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
     &::before {
       @include pseudo(40px, 19px);
       left: 0;
@@ -110,6 +115,16 @@
 }
 
 .contacts__button {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: var(--main-theme);
+  }
+
   @media (max-width: $tablet-width) {
     padding: 18px 30px;
   }

@@ -1,0 +1,336 @@
+.form {
+  min-width: 220px;
+  color: var(--contrast-type);
+
+  &--popup {
+    background-color: var(--main-theme);
+    width: 490px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 43px;
+    padding-top: 31px;
+    padding-bottom: 36px;
+
+    form {
+      p:first-child {
+        font-size: 28px;
+        line-height: 39px;
+        padding-left: 3px;
+        margin-bottom: 11px;
+      }
+
+      p {
+        padding-right: 10px;
+        margin-bottom: 30px;
+      }
+
+      input,
+      label,
+      span,
+      button[type=submit] {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      input {
+        margin-bottom: 33px;
+        padding-left: 23px;
+        border-radius: 0;
+      }
+
+      textarea {
+        box-sizing: border-box;
+        padding-left: 23px;
+        height: 104px;
+        margin-bottom: 31px;
+      }
+
+      button {
+        margin-bottom: 30px;
+      }
+
+      label {
+        padding-left: 48px;
+        padding-top: 6px;
+
+        &::before {
+          left: 0;
+        }
+      }
+
+      input:checked + label::after {
+      left: 5px;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  span {
+    position: relative;
+  }
+
+  input[type=checkbox] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    left: 15px;
+    top: 20px;
+  }
+
+  button[type=button] {
+    position: absolute;
+    right: 24px;
+    top: 28px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    width: 0;
+    padding-left: 21px;
+    padding-top: 21px;
+    padding-right: 0;
+    padding-bottom: 0;
+    border: none;
+
+    &::before,
+    &::after {
+      @include pseudo(24px, 1px);
+      background-color: var(--clear-background);
+      transform: rotate(45deg);
+      top: 9px;
+      left: 0;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  p:first-child {
+    font-family: $font-roboto-condensed;
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 8px;
+    padding-left: 0;
+    margin-left: -4px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    font-family: $font-pt-mono;
+  }
+
+  input:hover,
+  textarea:hover {
+    box-shadow: 0 0 0 2px var(--theme-hover);
+  }
+
+  textarea {
+    width: 100%;
+    margin-bottom: 43px;
+    padding: 11px 16px;
+    resize: none;
+  }
+
+  input,
+  textarea {
+    background-color: var(--form-input-background);
+    border: none;
+    color: var(--contrast-type);
+    font-family: $font-pt-mono;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    border-radius: 0;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--contrast-type);
+  }
+
+  input {
+    box-sizing: border-box;
+    padding: 14px 16px;
+    width: calc(50% - 15px);
+    margin-bottom: 41px;
+    margin-right: 30px;
+  }
+
+  input[type=tel] {
+    margin-right: 0;
+  }
+
+  button,
+  span {
+    width: calc(50% - 16px);
+  }
+
+  button {
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: $font-roboto-condensed;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 13px 45px;
+    background-color: var(--main-theme);
+    color: var(--contrast-type);
+    border: 1px solid var(--contrast-border);
+    margin-right: 32px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  label {
+    display: block;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.8;
+    padding-left: 39px;
+    padding-top: 8px;
+    cursor: pointer;
+    font-family: $font-pt-mono;
+
+    &::before {
+      @include pseudo (17px, 17px);
+      border: 1px solid var(--contrast-border);
+      left: 6px;
+      top: 7px;
+    }
+
+    &:hover::before {
+      opacity: 0.7;
+    }
+  }
+
+  input:checked + label::after {
+    @include pseudo(6px, 4px);
+    top: 12px;
+    left: 12px;
+    border-left: 1px solid var(--contrast-border);
+    border-bottom: 1px solid var(--contrast-border);
+    transform: rotate(-45deg);
+  }
+
+  input:checked:hover + label::after {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .form{
+    p:first-child {
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      width: 100%;
+      margin-bottom: 53px;
+    }
+
+    textarea {
+      margin-bottom: 45px;
+      padding: 10px 18px 15px;
+    }
+
+    input {
+      padding: 14px 18px;
+      margin-bottom: 46px;
+    }
+
+    button {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    label {
+      padding-left: 42px;
+      padding-top: 9px;
+
+      &::before {
+        left: 8px;
+        top: 10px;
+      }
+    }
+
+    input:checked + label::after {
+      top: 15px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    &--popup {
+      width: 100%;
+    }
+
+    p:first-child {
+      font-size: 28px;
+      line-height: 39px;
+      margin-bottom: 13px;
+      padding-left: 5px;
+    }
+
+    p {
+      margin-bottom: 26px;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+
+    textarea {
+      height: 104px;
+      margin-bottom: 29px;
+    }
+
+    button {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 21px;
+    }
+
+    span {
+      width: 100%;
+    }
+
+    label {
+      padding-left: 35px;
+
+      &::before {
+        left: 1px;
+      }
+    }
+
+    input:checked + label::after {
+      left: 7px;
+    }
+  }
+}
