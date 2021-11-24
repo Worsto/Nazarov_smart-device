@@ -1,0 +1,17 @@
+.background {
+  background-image: url("../img/background-triangles-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 31%;
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/background-triangles-tablet.svg");
+    background-size: 75%;
+    background-position-x: 105%;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-position: 50% 70%;
+    background-size: 175%;
+  }
+}
