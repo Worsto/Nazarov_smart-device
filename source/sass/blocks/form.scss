@@ -97,6 +97,7 @@
 
   button {
     display: inline-block;
+    vertical-align: middle;
     cursor: pointer;
     box-sizing: border-box;
     font-family: $font-roboto-condensed;
@@ -141,7 +142,7 @@
     }
   }
 
-  input:checked+label::after {
+  input:checked + label::after {
     @include pseudo(6px, 4px);
     top: 12px;
     left: 12px;
@@ -150,7 +151,7 @@
     transform: rotate(-45deg);
   }
 
-  input:checked:hover+label::after {
+  input:checked:hover + label::after {
     opacity: 0.7;
   }
 
@@ -180,7 +181,7 @@
       }
     }
 
-    input:checked+label::after {
+    input:checked + label::after {
       top: 15px;
     }
   }
@@ -215,7 +216,7 @@
       }
     }
 
-    input:checked+label::after {
+    input:checked + label::after {
       left: 7px;
     }
   }
@@ -275,7 +276,7 @@
       }
     }
 
-    input:checked+label::after {
+    input:checked + label::after {
       left: 5px;
     }
 
