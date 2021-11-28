@@ -144,15 +144,15 @@
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
-    &__production {
+    &--production {
       background-image: url("../img/producing-desktop@2x.webp");
     }
 
-    &__instalation {
+    &--instalation {
       background-image: url("../img/installing-desktop@2x.webp");
     }
 
-    &__led {
+    &--led {
       background-image: url("../img/led-desktop@2x.webp");
     }
   }
@@ -179,15 +179,15 @@
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      &__production {
+      &--production {
         background-image: url("../img/producing-tablet@2x.webp");
       }
 
-      &__instalation {
+      &--instalation {
         background-image: url("../img/installing-tablet@2x.webp");
       }
 
-      &__led {
+      &--led {
         background-image: url("../img/led-tablet@2x.webp");
       }
     }
@@ -219,15 +219,15 @@
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      &__production {
+      &--production {
         background-image: url("../img/producing-mobile@2x.webp");
       }
 
-      &__instalation {
+      &--instalation {
         background-image: url("../img/installing-mobile@2x.webp");
       }
 
-      &__led {
+      &--led {
         background-image: url("../img/led-mobile@2x.webp");
       }
     }

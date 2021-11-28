@@ -41,33 +41,6 @@
 .contacts__item {
   margin-right: 81px;
 
-  a {
-    padding-left: 40px;
-    line-height: 18px;
-    position: relative;
-    font-family: $font-pt-mono;
-
-    &:hover,
-    &:focus {
-      text-shadow: var(--main-theme) 0 0 5px;
-
-      svg {
-        fill: var(--contrast-border);
-        stroke: var(--main-theme)
-      }
-    }
-  }
-
-  svg {
-    @include pseudo(40px, 19px);
-    left: 0;
-    top: -1px;
-    background-repeat: no-repeat;
-    fill: var(--main-theme);
-    width: 18px;
-  }
-
-
   &:last-of-type {
     margin-right: 0;
   }
@@ -80,22 +53,6 @@
     margin-right: 35px;
     padding-top: 14px;
 
-    a {
-      font-size: 0;
-      line-height: 0;
-      padding-top: 26px;
-      padding-left: 23px;
-    }
-
-    svg {
-      width: 25px;
-      height: 26px;
-      left: 0;
-      top: 0;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
     &--mail {
       padding-top: 20px;
     }
@@ -106,7 +63,50 @@
   }
 }
 
+.contacts__link {
+  padding-left: 40px;
+  line-height: 18px;
+  position: relative;
+  font-family: $font-pt-mono;
+
+  svg {
+    @include pseudo(40px, 19px);
+    left: 0;
+    top: -1px;
+    background-repeat: no-repeat;
+    fill: var(--main-theme);
+    width: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    text-shadow: var(--main-theme) 0 0 5px;
+
+    svg {
+      fill: var(--contrast-border);
+      stroke: var(--main-theme)
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 0;
+    line-height: 0;
+    padding-top: 26px;
+    padding-left: 23px;
+
+    svg {
+      width: 25px;
+      height: 26px;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
 .contacts__button {
+
   &:hover,
   &:focus {
     opacity: 0.7;

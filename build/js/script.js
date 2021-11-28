@@ -96,7 +96,13 @@ const menuHeadings = document.querySelectorAll(`.page-footer__menu`);
 
 const switchVisability = (evt) => {
   let wasVisible = false;
-  const menu = evt.target;
+  const menu = evt.target.classList.contains('page-footer__menu') ? evt.target : evt.target.parentNode;
+
+  // if(theTarget.classList.contains('page-footer__menu')) {
+  //   menu = theTarget;
+  // } else {
+  //   menu = theTarget.parentNode;
+  // };
   const menus = document.querySelectorAll(`.page-footer__menu`);
 
   wasVisible = menu.classList.contains(`page-footer__menu--opened`) ? true : false;

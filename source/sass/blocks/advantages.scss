@@ -51,7 +51,7 @@
   margin-bottom: 30px;
   font-family: $font-pt-mono;
 
-  & svg {
+  svg {
     @include pseudo(36px, 35px);
     left: 41px;
     top: 37px;
