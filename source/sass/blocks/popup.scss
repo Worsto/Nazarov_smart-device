@@ -6,11 +6,18 @@
   height: 100vh;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
 }
 
 .popup--showing {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   position: fixed;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: auto;
+  }
 }
 
 .popup--closed {
@@ -19,9 +26,9 @@
 }
 
 .popup__form {
-  position: absolute;
-  top: calc(50% - 302px);
-  left: calc(50% - 245px);
+  position: relative;
+  grid-column-start: 2;
+  grid-row-start: 2;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 
   @media (max-width: $mobile-width) {

@@ -106,6 +106,7 @@
 }
 
 .contacts__button {
+  flex-shrink: 0;
 
   &:hover,
   &:focus {

@@ -3,14 +3,23 @@
 
 const MOBILE_VIEWPORT_WIDTH_MAX = 767;
 const BUTTON_FREE_CONSULT_MOBILE_TEXT_CONTENT = 'Бесплатная консультация';
+const BUTTON_FREE_CONSULT_TABLET_TEXT_CONTENT = 'Получить бесплатную консультацию';
 
-const viewPortWidth = window.innerWidth;
 const buttonFreeConsult = document.querySelector('.top-section__button');
-const isMobile = viewPortWidth <= MOBILE_VIEWPORT_WIDTH_MAX;
+let isMobile;
 
-if (isMobile) {
-  buttonFreeConsult.textContent = BUTTON_FREE_CONSULT_MOBILE_TEXT_CONTENT;
-};
+const setButton = () => {
+  const viewPortWidth = window.innerWidth;
+  isMobile = viewPortWidth <= MOBILE_VIEWPORT_WIDTH_MAX;
+  if (isMobile) {
+    buttonFreeConsult.textContent = BUTTON_FREE_CONSULT_MOBILE_TEXT_CONTENT;
+  } else {
+    buttonFreeConsult.textContent = BUTTON_FREE_CONSULT_TABLET_TEXT_CONTENT;
+  };
+}
+
+setButton();
+window.addEventListener('resize', setButton);
 
 // popup
 
@@ -73,11 +82,11 @@ const onEscPress = (evt) => {
   }
 }
 
-if(callButton) {
+if (callButton) {
   callButton.addEventListener(`click`, onFormOpen);
 };
 
-if(closeButton) {
+if (closeButton) {
   closeButton.addEventListener(`click`, onFormClose);
 };
 
@@ -97,12 +106,6 @@ const menuHeadings = document.querySelectorAll(`.page-footer__menu`);
 const switchVisability = (evt) => {
   let wasVisible = false;
   const menu = evt.target.classList.contains('page-footer__menu') ? evt.target : evt.target.parentNode;
-
-  // if(theTarget.classList.contains('page-footer__menu')) {
-  //   menu = theTarget;
-  // } else {
-  //   menu = theTarget.parentNode;
-  // };
   const menus = document.querySelectorAll(`.page-footer__menu`);
 
   wasVisible = menu.classList.contains(`page-footer__menu--opened`) ? true : false;
@@ -157,11 +160,17 @@ window.addEventListener("DOMContentLoaded", function () {
     } else setCursorPosition(this.value.length, this)
   };
   const input = document.querySelector("#tel");
-  if (input) {
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, false);
+  const inputPopup = document.querySelector("#tel-popup");
+
+  function setMask(element) {
+    if (element) {
+      element.addEventListener("input", mask, false);
+      element.addEventListener("focus", mask, false);
+      element.addEventListener("blur", mask, false);
+    }
   }
+  setMask(input);
+  setMask(inputPopup);
 });
 
 // local storage
