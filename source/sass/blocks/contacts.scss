@@ -107,6 +107,7 @@
 
 .contacts__button {
   flex-shrink: 0;
+  align-self: flex-start;
 
   &:hover,
   &:focus {

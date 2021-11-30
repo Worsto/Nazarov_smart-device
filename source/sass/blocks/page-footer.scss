@@ -224,6 +224,14 @@
   }
 }
 
+.page-footer__social {
+  max-width: 216px;
+
+  @media (max-width: $mobile-width) {
+    max-width: none;
+  }
+}
+
 .page-footer__menu {
   @media (max-width:$tablet-width) {
     padding-top: 37px;
